@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Asistencia - María & Carlos</title>
+    <link rel="stylesheet" href="./assets/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Volver a la Invitación
+            </a>
+            <h1>Confirmación de Asistencia</h1>
+            <p>María & Carlos</p>
+        </div>
+
+        <div class="form-content">
+            <form id="confirmationForm" class="confirmation-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="attendance">¿Confirmas tu asistencia? *</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="si">Sí, asistiré con mucho gusto</option>
+                        <option value="no">No podré asistir</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="guestsGroup" style="display: none;">
+                    <label for="guests">Número de Acompañantes</label>
+                    <select id="guests" name="guests">
+                        <option value="0">Solo yo</option>
+                        <option value="1">1 acompañante</option>
+                        <option value="2">2 acompañantes</option>
+                        <option value="3">3 acompañantes</option>
+                        <option value="4">4 acompañantes</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="guestNamesGroup" style="display: none;">
+                    <label for="guestNames">Nombres de los Acompañantes</label>
+                    <textarea id="guestNames" name="guestNames" rows="3" placeholder="Escribe los nombres de tus acompañantes, uno por línea"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Restricciones Alimentarias</label>
+                    <textarea id="dietary" name="dietary" rows="2" placeholder="Vegetariano, vegano, alergias, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje para los Novios</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Comparte tus buenos deseos..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-heart"></i>
+                    Confirmar Asistencia
+                </button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>¡Confirmación Exitosa!</h3>
+                    <p>Gracias por confirmar tu asistencia. María y Carlos están emocionados de celebrar contigo.</p>
+                    <a href="index.html" class="return-btn">Volver a la Invitación</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Confirmaciones (simulando Excel web) -->
+        <div class="admin-section" id="adminSection">
+            <h2>Lista de Confirmaciones</h2>
+            <div class="table-container">
+                <table id="confirmationsTable">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Asistencia</th>
+                            <th>Acompañantes</th>
+                            <th>Nombres Acompañantes</th>
+                            <th>Restricciones</th>
+                            <th>Mensaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-actions">
+                <button onclick="exportToCSV()" class="export-btn">
+                    <i class="fas fa-download"></i> Exportar CSV
+                </button>
+                <button onclick="clearData()" class="clear-btn">
+                    <i class="fas fa-trash"></i> Limpiar Datos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/confirmation.js"></script>
+</body>
+</html>
