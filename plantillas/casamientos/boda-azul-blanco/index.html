@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina & Marcelo - Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./contador.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <h1 class="couple-names" style="color: gold;">Nuestra boda</h1>
+    <h1 class="couple-names">Carolina & Marcelo</h1>
+    <div class="wedding-date">
+        <p class="date-text">27 de Septiembre, 2025</p>
+        <div class="decorative-line"></div>
+        <p class="subtitle">Nos casamos y queremos compartir este día especial contigo</p>
+        
+        <!-- Agregar el contador aquí -->
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+    </div>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">M & C</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Nosotros</a></li>
+                <li><a href="#details" class="nav-link">Detalles</a></li>
+                <li><a href="#rules" class="nav-link">Reglas</a></li>
+                <li><a href="#pricing" class="nav-link">Precios</a></li>
+                <li><a href="#music" class="nav-link">Música</a></li>
+                <li><a href="#gallery" class="nav-link">Galería</a></li>
+                <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Music Section -->
+    <section class="music" id="music">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Canción</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-music"></i>
+                </div>
+                <p class="music-subtitle">La melodía que acompañará nuestro día especial</p>
+            </div>
+            <div class="music-player-container">
+                <div class="music-player">
+                    <div class="player-info">
+                        <div class="song-artwork">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="song-details">
+                            <h3 id="songTitle">Nuestra Canción Especial</h3>
+                            <p id="songArtist">Carolina & Marcelo</p>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="control-btn" id="playPauseBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="time-info">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        <div class="volume-container">
+                            <i class="fas fa-volume-up"></i>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="50" class="volume-slider">
+                        </div>
+                    </div>
+                    <audio id="audioPlayer" preload="metadata">
+                        <source src="./wedding-song.mp3" type="audio/mpeg">
+                        <source src="./wedding-song.ogg" type="audio/ogg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+                <div class="upload-info">
+                    <p><i class="fas fa-info-circle"></i> Si deseas escuchar la cancion que elegimos para nuestro momento, solo dale a reproducir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item slide-up">
+                    <div class="timeline-content">
+                        <h3>Nos conocimos</h3>
+                        <p class="timeline-date">Mayo de 1999</p>
+                        <p>Por una de nuestras amistades que teniamos en comun
+</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-up">
+                    <div class="timeline-content">
+                        <h3>Primera cita</h3>
+                        <p class="timeline-date">En 1999</p>
+                        <p>en la plaza Pedernera, donde compartimos un helado en una heladería en ese entonces Dolce neve
+</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-up">
+                    <div class="timeline-content">
+                        <h3>La propuesta</h3>
+                        <p class="timeline-date">Diciembre 2023</p>
+                        <p>la propuesta fue el 25 de enero del 2025 en la iglesia M.A.P Jesús tu salvador.</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-up">
+                    <div class="timeline-content">
+                        <h3>¡Nuestra boda!</h3>
+                        <p class="timeline-date">Septiembre 2025</p>
+                        <p>llegó el día desde el 12/12/2012 que venimos esperando y anhelando para poder celebrarlo con todos ustedes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Details -->
+    <section class="details" id="details">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Detalles del Evento</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-calendar-heart"></i>
+                </div>
+            </div>
+            <div class="details-grid">
+                <div class="detail-card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3>Ceremonia y Recepcion</h3>
+                    <p><strong>Fecha:</strong> 27 de Septiembre, 2025</p>
+                    <p><strong>Hora:</strong> 21:00 PM</p>
+                    <p><strong>Lugar:</strong> Salon Vikingos y la Bruja</p>
+                    <p>Chile, esquina Cordoba</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="rules" id="rules">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Reglas del Evento</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <p class="rules-subtitle">Para garantizar una celebración armoniosa, te pedimos seguir estas indicaciones</p>
+            </div>
+            <div class="rules-grid">
+                <div class="rule-card fade-in">
+                    <div class="rule-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>Bebidas Alcohólicas</h3>
+                    <p>No está permitido el consumo de bebidas alcohólicas durante el evento. Contaremos con una variedad de bebidas sin alcohol para todos los invitados.</p>
+                </div>
+                <div class="rule-card fade-in">
+                    <div class="rule-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Área del Asador</h3>
+                    <p>Por motivos de seguridad, no está permitido el ingreso a la sección del asador.</p>
+                </div>
+                <div class="rule-card fade-in">
+                    <div class="rule-icon">
+                        <i class="fas fa-smoking"></i>
+                    </div>
+                    <h3>Área para Fumar</h3>
+                    <p>Se puede acceder al patio designado para fumar. Pero no se puede salir fuera del salon por motivos de seguridad Por favor, mantén el área limpia, habra un encargado en el lugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Información de Precios</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <p class="pricing-subtitle">Detalles de costos y forma de pago para confirmar tu asistencia</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Tarjeta Individual</h3>
+                    <div class="price">$10.000</div>
+                    <p>Por persona</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Ceremonia completa</li>
+                        <li><i class="fas fa-check"></i> Cena y bebidas</li>
+                        <li><i class="fas fa-check"></i> Música y entretenimiento</li>
+                    </ul>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    
+                    <div class="pricing-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Grupo Familiar</h3>
+                    <div class="price">$20.000</div>
+                    <p>Por familia (hasta 4 personas)</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Ceremonia completa</li>
+                        <li><i class="fas fa-check"></i> Cena y bebidas</li>
+                        <li><i class="fas fa-check"></i> Música y entretenimiento</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="payment-info">
+                <div class="payment-card">
+                    <h3><i class="fas fa-credit-card"></i> Forma de Pago</h3>
+                    <p><strong>Seña requerida:</strong> 50% del valor total</p>
+                    <p><strong>Fecha límite para seña:</strong> 20 de Julio, 2025</p>
+                    <p><strong>Saldo restante:</strong> Se cancela antes del 20 de agosto</p>
+                    <p><strong>MercadoPago para abonar la seña:</strong></p>
+                    <p><strong>A nombre de:</strong> Carolina Andrea Perez</p>
+                    <p><strong>Alias:</strong> ejemplodealias.mp</p>
+                    <p><strong>Por favor, adjuntar comprobante al confirmar la asistencia.</strong> </p>
+                    <div class="payment-methods">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galería</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-images"></i>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide active">
+                        <img src="./img/casamiento1.jpg" alt="Foto 1">
+                        
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/casamiento2.jpg" alt="Foto 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/casamiento3.jpg" alt="Foto 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/casamiento4.jpg" alt="Foto 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/casamiento5.jpg" alt="Foto 5">
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+       <!-- RSVP Section -->
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Confirma tu Asistencia</h2>
+                <div class="decorative-element">
+                    <i class="fas fa-envelope-heart"></i>
+                </div>
+                <p class="rsvp-subtitle">Por favor confirma tu asistencia antes del 20 de Julio</p>
+            </div>
+            <div class="rsvp-form-container">
+                <form class="rsvp-form" id="rsvpForm">
+                    <!-- Paso 1: Selección de invitado -->
+                    <div class="form-step" id="step1">
+                        <div class="form-group">
+                            <label for="guestSelect">Selecciona tu nombre de la lista de invitados *</label>
+                            <select id="guestSelect" name="guestSelect" required>
+                                <option value="">Busca tu nombre...</option>
+                            </select>
+                        </div>
+                        <button type="button" class="next-btn" id="nextStep1">
+                            <i class="fas fa-arrow-right"></i>
+                            Continuar
+                        </button>
+                    </div>
+
+                    <!-- Paso 2: Información del grupo familiar -->
+                    <div class="form-step hidden" id="step2">
+                        <div class="guest-info-card">
+                            <h3 id="selectedGuestName">Información del Invitado</h3>
+                            <div class="guest-details">
+                                <p><strong>Tipo de entrada:</strong> <span id="ticketTypeDisplay"></span></p>
+                                <p><strong>Precio:</strong> <span id="priceDisplay"></span></p>
+                                <p>En caso de asistir solo, el precio es de $10.000</p>
+                            </div>
+                        </div>
+
+                        <!-- Opciones de asistencia para grupos familiares -->
+                        <div class="form-group" id="attendanceOptionsGroup" style="display: none;">
+                            <label>¿Cómo deseas asistir? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="attendanceType" value="alone" required>
+                                    <span>Asistiré solo/a</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="attendanceType" value="family" required>
+                                    <span>Asistiré con mi grupo familiar</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Lista de miembros familiares -->
+                        <div class="form-group" id="familyMembersGroup" style="display: none;">
+                            <label>Miembros de tu grupo familiar invitados:</label>
+                            <div id="familyMembersList" class="family-members-list">
+                                <!-- Se llena dinámicamente -->
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attendance">¿Asistirás? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="attendance" value="yes" required>
+                                    <span>Sí, asistiré</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="attendance" value="no" required>
+                                    <span>No podré asistir</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="paymentGroup" style="display: none;">
+                            <label for="paymentStatus">Estado del pago *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="paymentStatus" value="deposit">
+                                    <span>Ya pagué la seña (50%)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="paymentStatus" value="pending">
+                                    <span>Pagaré la seña próximamente</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje especial (opcional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Escribe un mensaje para los novios..."></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="back-btn" id="backStep1">
+                                <i class="fas fa-arrow-left"></i>
+                                Volver
+                            </button>
+                            <button type="button" class="whatsapp-btn" id="whatsappBtn" style="display: none;">
+                                <i class="fab fa-whatsapp"></i>
+                                Confirmar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-text">
+                <h3>Carolina y Marcelo</h3>
+                <p>27 de Septiembre, 2025</p>
+                <p>¡Gracias por ser parte de nuestro día especial!</p>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Por Momentta. Hecho con amor.</p>
+            <div class="social-icons">
+                <a href="https://wa.me/+542657305625" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/luciano_rodriguez86" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-check-circle"></i>
+                <h3>¡Gracias por confirmar!</h3>
+                <p>Hemos recibido tu confirmación. ¡Te esperamos con mucha emoción!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="./contador.js"></script>
+    <script src="guest-data.js"></script>

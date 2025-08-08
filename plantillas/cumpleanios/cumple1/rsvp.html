@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+ <!--HTML DE ASISTENCIA AL EVENTO-->
+     <!-- Sección Principal de Invitación -->
+    <section id="invitation-section" class="invitation-container">
+        <div class="invitation-card">
+            <div class="invitation-header">
+                <div class="heart-decoration">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" class="heart-icon">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#heartGradient)" stroke="url(#heartStroke)" stroke-width="1"/>
+                        <defs>
+                            <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--heart-color-start);stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:var(--heart-color-middle);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--heart-color-end);stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="heartStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--heart-stroke-start);stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:var(--heart-stroke-end);stop-opacity:0.8" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1>¡Estás Invitado!</h1>
+                <p class="event-details">Nos encantaría contar con tu presencia en nuestro evento especial</p>
+            </div>
+            
+            <div class="rsvp-prompt">
+                <h3>Confirma tu Asistencia</h3>
+                <p>Por favor, háznoslo saber para poder preparar todo perfectamente</p>
+                <button id="rsvp-btn" class="rsvp-button">
+                    <span>Confirmar Asistencia</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de RSVP -->
+    <section id="rsvp-form-section" class="form-container hidden">
+        <div class="form-card">
+            <button id="back-btn" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Volver
+            </button>
+            
+            <div class="form-header">
+                <h2>Confirma tu Asistencia</h2>
+                <p>Completa los siguientes datos</p>
+            </div>
+
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Número de Celular *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>¿Confirmas tu asistencia? *</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="yes" required>
+                            <span class="radio-custom"></span>
+                            Sí, asistiré
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="no" required>
+                            <span class="radio-custom"></span>
+                            No podré asistir
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" id="companions-group" style="display: none;">
+                    <label for="companions">Número de Acompañantes</label>
+                    <select id="companions" name="companions">
+                        <option value="0">Solo yo</option>
+                        <option value="1">1 acompañante</option>
+                        <option value="2">2 acompañantes</option>
+                        <option value="3">3 acompañantes</option>
+                        <option value="4">4 acompañantes</option>
+                        <option value="5">5+ acompañantes</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    <span>Enviar Confirmación</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Panel de Administración -->
+        <div class="admin-section">
+            <div class="admin-toggle">
+                <button id="admin-toggle-btn" class="admin-btn">Acceso Administrador</button>
+            </div>
+            
+            <div id="admin-login" class="admin-login hidden">
+                <div class="admin-login-form">
+                    <input type="password" id="admin-password" placeholder="Contraseña de administrador">
+                    <button id="admin-login-btn">Acceder</button>
+                </div>
+            </div>
+
+            <div id="admin-panel" class="admin-panel hidden">
+                <div class="admin-header">
+                    <h3>Panel de Administración</h3>
+                    <button id="admin-logout" class="logout-btn">Cerrar Sesión</button>
+                </div>
+                
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" id="confirmed-count">0</span>
+                        <span class="stat-label">Confirmados</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="declined-count">0</span>
+                        <span class="stat-label">No Asistirán</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-count">0</span>
+                        <span class="stat-label">Total Respuestas</span>
+                    </div>
+                </div>
+
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Teléfono</th>
+                                <th>Acompañantes</th>
+                                <th>Asistencia</th>
+                                <th>Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="guests-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>¡Confirmación Enviada!</h3>
+            </div>
+            <div class="modal-body">
+                <p id="success-message"></p>
+            </div>
+            <button id="close-modal" class="modal-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <!--HTML DE ASISTENCIA AL EVENTO-->
+
+
+</body>
+</html>
