@@ -32,7 +32,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
-    background-image: url('/plantillas/casamientos/boda-dorada/utils/images_carruseles/hero.jpg');
+    background-image: url('../utils/images_carruseles/hero.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
