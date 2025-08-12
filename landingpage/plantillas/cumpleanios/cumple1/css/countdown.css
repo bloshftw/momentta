@@ -1,0 +1,305 @@
+/* ========================================
+   VARIABLES CSS PARA FÁCIL PERSONALIZACIÓN
+   ======================================== */
+:root {
+  /* Colores principales */
+  --primary-color: #d4af37;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --background-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --text-light: #7f8c8d;
+
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #d4af37, #f1c40f);
+  --gradient-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Tipografía */
+  --font-primary: "Georgia", "Times New Roman", serif;
+  --font-secondary: "Arial", "Helvetica", sans-serif;
+  --font-size-title: 2.5rem;
+  --font-size-subtitle: 1.2rem;
+  --font-size-number: 3rem;
+  --font-size-label: 0.9rem;
+
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Bordes y sombras */
+  --border-radius: 15px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  /* Animaciones */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========================================
+   ESTILOS BASE
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background: var(--gradient-background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.countdown-container {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-xl);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+
+.countdown-container:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* ========================================
+   ENCABEZADO
+   ======================================== */
+.countdown-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.countdown-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-title);
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-subtitle {
+  font-size: var(--font-size-subtitle);
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ========================================
+   CONTADOR PRINCIPAL
+   ======================================== */
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+.time-unit {
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  min-width: 100px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.time-unit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.time-unit:hover::before {
+  left: 100%;
+}
+
+.time-unit:hover {
+  transform: scale(1.05);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.time-number {
+  display: block;
+  font-size: var(--font-size-number);
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-secondary);
+  line-height: 1;
+}
+
+.time-label {
+  display: block;
+  font-size: var(--font-size-label);
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.time-separator {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  animation: var(--animation-pulse);
+}
+
+/* ========================================
+   MENSAJE DE EXPIRACIÓN
+   ======================================== */
+.countdown-message {
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  color: white;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.countdown-message h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-title);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-message p {
+  font-size: var(--font-size-subtitle);
+  opacity: 0.9;
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes numberChange {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.number-change {
+  animation: numberChange 0.3s ease-in-out;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  :root {
+    --font-size-title: 2rem;
+    --font-size-number: 2.5rem;
+    --spacing-xl: 2rem;
+  }
+
+  .countdown-container {
+    padding: var(--spacing-lg);
+  }
+
+  .time-unit {
+    min-width: 80px;
+    padding: var(--spacing-sm);
+  }
+
+  .time-separator {
+    display: none;
+  }
+
+  .countdown-timer {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-title: 1.8rem;
+    --font-size-number: 2rem;
+    --font-size-label: 0.8rem;
+  }
+
+  .time-unit {
+    min-width: 70px;
+  }
+
+  .countdown-timer {
+    justify-content: space-around;
+  }
+}
+
+/* ========================================
+   TEMAS ALTERNATIVOS (OPCIONAL)
+   ======================================== */
+
+/* Tema Elegante */
+.theme-elegant {
+  --primary-color: #8e44ad;
+  --secondary-color: #2c3e50;
+  --gradient-primary: linear-gradient(135deg, #8e44ad, #9b59b6);
+  --gradient-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Tema Romántico */
+.theme-romantic {
+  --primary-color: #e91e63;
+  --secondary-color: #880e4f;
+  --gradient-primary: linear-gradient(135deg, #e91e63, #f06292);
+  --gradient-background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Tema Moderno */
+.theme-modern {
+  --primary-color: #00bcd4;
+  --secondary-color: #263238;
+  --gradient-primary: linear-gradient(135deg, #00bcd4, #26c6da);
+  --gradient-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}

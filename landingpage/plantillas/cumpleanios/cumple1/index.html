@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>¡Estás invitado! Cumple infantil</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/rsvp.css" />
+    <link rel="stylesheet" href="./css/countdown.css">
+  </head>
+  <body>
+
+
+ <div class="countdown-container">
+        <div class="countdown-header">
+            <h2 class="countdown-title">¡Faltan solo!</h2>
+            <p class="countdown-subtitle">Para nuestro gran día</p>
+        </div>
+        
+        <div class="countdown-timer" id="countdown">
+            <div class="time-unit">
+                <span class="time-number" id="days">00</span>
+                <span class="time-label">Días</span>
+            </div>
+            <div class="time-separator">:</div>
+            <div class="time-unit">
+                <span class="time-number" id="hours">00</span>
+                <span class="time-label">Horas</span>
+            </div>
+            <div class="time-separator">:</div>
+            <div class="time-unit">
+                <span class="time-number" id="minutes">00</span>
+                <span class="time-label">Minutos</span>
+            </div>
+            <div class="time-separator">:</div>
+            <div class="time-unit">
+                <span class="time-number" id="seconds">00</span>
+                <span class="time-label">Segundos</span>
+            </div>
+        </div>
+        
+        <div class="countdown-message" id="expiredMessage" style="display: none;">
+            <h3>¡El gran día ha llegado! 🎉</h3>
+            <p>Gracias por acompañarnos en este momento especial</p>
+        </div>
+    </div>
+
+
+<!--Contador-->
+    <script>
+        // Configuración del contador - PERSONALIZA AQUÍ
+        const countdownConfig = {
+            targetDate: '2024-12-31 18:00:00', // Formato: YYYY-MM-DD HH:MM:SS
+            timezone: 'America/Argentina_City', // Zona horaria
+            expiredTitle: '¡El gran día ha llegado! 🎉',
+            expiredMessage: 'Gracias por acompañarnos en este momento especial'
+        };
+        
+        // Inicializar el contador
+        initCountdown(countdownConfig);
+    </script>
+
+<!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/rsvp.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/countdown.js"></script>
+  </body>
+</html>

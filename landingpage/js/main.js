@@ -174,10 +174,3 @@ window.addEventListener('load', () => {
     }
 });
 
-// Console welcome message
-console.log(`
-🎉 ¡Bienvenido a Momentta! 🎉
-Creamos invitaciones digitales únicas para tus momentos especiales.
-¿Tienes alguna pregunta? ¡Contáctanos por WhatsApp!
-WhatsApp: +54 9 2657 305625
-`);
