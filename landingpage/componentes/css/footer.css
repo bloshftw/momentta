@@ -1,0 +1,143 @@
+/* ===============================================
+   FOOTER MOMENTTA - COMPONENTE DESACOPLADO
+   =============================================== */
+
+:root {
+  /* Variables de color personalizables por plantilla */
+  --momentta-primary: #6366f1;
+  --momentta-secondary: #8b5cf6;
+  --momentta-text: #374151;
+  --momentta-text-light: #6b7280;
+  --momentta-bg: #ffffff;
+  --momentta-border: #e5e7eb;
+}
+
+.momentta-footer {
+  width: 100%;
+  padding: 1.25rem 1rem;
+  margin-top: 2.5rem;
+  background-color: var(--momentta-bg);
+  border-top: 1px solid var(--momentta-border);
+  text-align: center;
+}
+
+.momentta-footer__dedication {
+  font-size: 0.85rem;
+  color: var(--momentta-text-light);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.momentta-footer__dedication .names {
+  color: var(--momentta-primary);
+  font-weight: 600;
+}
+
+.momentta-footer__brand {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--momentta-text-light);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.momentta-footer__brand .brand-name {
+  color: var(--momentta-primary);
+  font-weight: 600;
+}
+
+.momentta-footer__heart {
+  color: #ef4444;
+  margin: 0 0.25rem;
+  font-size: 0.9rem;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.momentta-footer__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.momentta-footer__contact-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--momentta-text-light);
+  transition: fill 0.3s ease;
+}
+
+.momentta-footer__contact-icon:hover {
+  fill: var(--momentta-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .momentta-footer {
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .momentta-footer__dedication {
+    font-size: 0.8rem;
+  }
+  
+  .momentta-footer__brand {
+    font-size: 0.75rem;
+  }
+  
+  .momentta-footer__contact {
+    gap: 0.5rem;
+  }
+}
+
+/* Variaciones de tema para diferentes eventos */
+
+/* Tema Boda - Elegante */
+.momentta-footer.theme-wedding {
+  --momentta-primary: #d4af37;
+  --momentta-secondary: #f4e4bc;
+  --momentta-text: #2c1810;
+  --momentta-text-light: #8b7355;
+  --momentta-bg: #fefcf8;
+  --momentta-border: #f0e6d2;
+}
+
+/* Tema Cumpleaños - Vibrante */
+.momentta-footer.theme-birthday {
+  --momentta-primary: #ec4899;
+  --momentta-secondary: #f97316;
+  --momentta-text: #1f2937;
+  --momentta-text-light: #6b7280;
+  --momentta-bg: #fef7ff;
+  --momentta-border: #f3e8ff;
+}
+
+/* Tema Corporativo - Profesional */
+.momentta-footer.theme-corporate {
+  --momentta-primary: #1e40af;
+  --momentta-secondary: #3b82f6;
+  --momentta-text: #1f2937;
+  --momentta-text-light: #6b7280;
+  --momentta-bg: #f8fafc;
+  --momentta-border: #e2e8f0;
+}
+
+/* Tema Baby Shower - Suave */
+.momentta-footer.theme-babyshower {
+  --momentta-primary: #06b6d4;
+  --momentta-secondary: #67e8f9;
+  --momentta-text: #164e63;
+  --momentta-text-light: #0891b2;
+  --momentta-bg: #f0fdff;
+  --momentta-border: #cffafe;
+}
