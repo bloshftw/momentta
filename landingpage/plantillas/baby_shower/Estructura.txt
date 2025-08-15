@@ -1,0 +1,131 @@
+# Estructura Base - Invitaciones Baby Shower
+
+## 1. SECCIÓN HEADER/ENCABEZADO
+- **Título principal**: "Baby Shower" / "¡Celebremos la llegada del bebé!"
+- **Elementos decorativos**: Iconos temáticos (chupetes, cochecitos, pañales, etc.)
+- **Frase catch**: "Un nuevo miembro viene en camino" / "La dulce espera"
+
+## 2. INFORMACIÓN DE LOS PADRES
+- **Nombres de los padres**: "En honor a [Nombre Mamá] y [Nombre Papá]"
+- **Foto de los padres** (opcional): Espacio para imagen de la pareja
+- **Mensaje personal**: Breve dedicatoria o frase emotiva
+
+## 3. INFORMACIÓN DEL BEBÉ
+- **Nombre del bebé** (si ya lo tienen): "Esperando a [Nombre]"
+- **Sexo del bebé**: 
+  - Si lo saben: Colores y elementos específicos (rosa/azul)
+  - Si no: Colores neutros (amarillo, verde, blanco)
+- **Fecha estimada de nacimiento**: "Baby [Apellido] - [Mes/Año]"
+
+## 4. DETALLES DEL EVENTO
+### Información esencial:
+- **Fecha**: Día, fecha completa
+- **Hora**: Inicio (y fin opcional)
+- **Dirección completa**: 
+  - Calle y número
+  - Ciudad, provincia
+  - Referencias adicionales si es necesario
+- **Mapa interactivo**: Enlace a Google Maps o mapa embedded
+
+## 5. INFORMACIÓN ADICIONAL
+- **Dress code** (opcional): "Vestimenta sugerida"
+- **Tema del baby shower**: Si tiene temática específica
+- **¿Qué llevar?**: Orientación sobre regalos o contribuciones
+- **Confirmación via WhatsApp**:
+  - Botón directo a WhatsApp con mensaje pre-escrito
+  - Mensaje sugerido: "¡Hola! Confirmo mi asistencia al Baby Shower de [Nombres]. ¡Nos vemos el [Fecha]! 🍼"
+  - Número de contacto visible
+  - Fecha límite para confirmar
+
+## 6. SECCIÓN DE CONTACTO
+- **Para consultas y confirmaciones**:
+  - WhatsApp de los padres o organizador (clickeable)
+  - Teléfono tradicional de respaldo
+  - Horarios de contacto sugeridos
+- **Mensaje motivador**: "¡Esperamos verte en nuestra celebración!"
+- **Botones de WhatsApp**:
+  - "Confirmar Asistencia" 
+  - "Hacer una Consulta"
+  - Ambos con mensajes pre-escritos diferentes
+
+## 7. SECCIÓN DE DESEOS/REGALO
+- **Lista de regalos** (opcional):
+  - "Necesidades del bebé"
+  - Enlaces a tiendas o wish lists
+- **Sugerencias de regalos**: Por categorías (ropa, juguetes, cuidado)
+- **"Lo más importante es tu presencia"**: Mensaje que no presione por regalos
+
+## 8. ELEMENTOS INTERACTIVOS
+- **Contador regresivo**: Días hasta el evento (JavaScript puro)
+- **Botones WhatsApp**: Confirmación y consultas directas
+- **Compartir invitación**: Botones para redes sociales
+- **Mostrar/Ocultar mapa**: Toggle para ver ubicación detallada
+
+## 8. SECCIÓN EMOCIONAL/PERSONAL
+- **Mensaje de agradecimiento**: "Gracias por acompañarnos"
+- **Frase emotiva**: Sobre la maternidad/paternidad
+- **Historia breve** (opcional): Cómo se conocieron o journey del embarazo
+
+## 9. FOOTER/PIE
+- **Hashtag del evento**: #BabyShower[Apellidos]
+- **Contacto para consultas**
+- **Mensaje de despedida**: "¡Los esperamos!"
+
+## 10. ELEMENTOS VISUALES CONSTANTES
+### Paleta de colores base:
+- **Neutral**: Pasteles suaves (rosa pálido, azul claro, amarillo, mint)
+- **Tipografía**: Scripts elegantes para títulos, sans-serif para texto
+- **Iconografía**: 
+  - Bebé: chupetes, biberones, pañales
+  - Naturaleza: nubes, estrellas, corazones
+  - Juguetes: ositos, bloques, sonajeros
+
+### Espacios para personalización:
+- **Background**: Pattern o imagen de fondo personalizable
+- **Colores**: Adaptable según preferencias de los padres
+- **Fotos**: Espacios definidos para imágenes personales
+- **Elementos decorativos**: Marcos, bordes, separadores
+
+## 11. CONSIDERACIONES TÉCNICAS
+### Responsive design:
+- **Mobile-first**: Optimizado para smartphones
+- **Tablet**: Adaptable a pantallas medianas
+- **Desktop**: Versión completa para computadoras
+
+### Performance:
+- **Imágenes optimizadas**: WebP, compresión
+- **Carga rápida**: Lazy loading para imágenes
+- **Offline**: Cache para elementos básicos
+
+## 12. VARIACIONES TEMÁTICAS
+### Templates diferenciados:
+- **Clásico**: Colores pasteles, elementos tradicionales
+- **Moderno**: Diseño minimalista, tipografía bold
+- **Tropical**: Elementos naturales, colores vibrantes
+- **Vintage**: Estilo retro, colores sepia
+- **Unisex**: Cuando no se conoce el sexo del bebé
+
+## 13. CALL TO ACTIONS (WhatsApp Focused)
+- **Confirmar asistencia** (WhatsApp con mensaje pre-escrito)
+- **Hacer consulta** (WhatsApp para preguntas)
+- **Ver ubicación** (Google Maps)
+- **Llamar directamente** (tel: link)
+- **Compartir invitación** (redes sociales)
+
+---
+
+## CHECKLIST DE CONTENIDO OBLIGATORIO:
+- [ ] Nombres de los padres
+- [ ] Fecha y hora del evento
+- [ ] Dirección completa + Google Maps
+- [ ] Contacto WhatsApp con mensaje pre-escrito
+- [ ] Teléfono de contacto alternativo
+- [ ] Mensaje de bienvenida/agradecimiento
+- [ ] Elementos visuales temáticos
+- [ ] Información sobre regalos (opcional pero recomendada)
+- [ ] Botones de acción (WhatsApp, Maps, Llamada)
+
+### EJEMPLO DE MENSAJE PRE-ESCRITO WHATSAPP:
+**Para confirmar**: "¡Hola [Nombre Mamá/Papá]! Confirmo mi asistencia al Baby Shower. ¡Estamos emocionados de celebrar con ustedes! 🍼👶"
+
+**Para consultas**: "¡Hola! Tengo una consulta sobre el Baby Shower del [Fecha]. ¿Podrían ayudarme? 😊"

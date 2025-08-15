@@ -1,0 +1,169 @@
+# Prompt para Crear Invitación Digital Baby Shower
+
+---
+
+## INSTRUCCIÓN PRINCIPAL:
+Crea una invitación digital completa para baby shower usando HTML, CSS y JavaScript vanilla. La invitación debe ser responsive, moderna, y fácil de personalizar.
+
+---
+
+## ESPECIFICACIONES TÉCNICAS:
+
+### Archivo único HTML que incluya:
+- **HTML**: Estructura semántica completa
+- **CSS**: Estilos embebidos con variables CSS para fácil personalización
+- **JavaScript**: Funcionalidades interactivas (contador, botones WhatsApp)
+
+### Sistema de personalización con CSS Variables:
+```css
+:root {
+  /* Colores principales */
+  --primary-color: #ffb6c1; /* Rosa suave por defecto */
+  --secondary-color: #87ceeb; /* Azul cielo */
+  --accent-color: #ffd700; /* Dorado */
+  --neutral-color: #f8f9fa; /* Blanco roto */
+  --text-dark: #333333;
+  --text-light: #666666;
+  
+  /* Fuentes */
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: 'Open Sans', sans-serif;
+  
+  /* Espaciados */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+}
+```
+
+---
+
+## ESTRUCTURA REQUERIDA (en orden):
+
+### 1. HEADER/ENCABEZADO
+- Título principal "Baby Shower" estilizado
+- Subtítulo emotivo (ej: "Un nuevo miembro viene en camino")
+- Elementos decorativos (iconos de bebé con CSS o SVG inline)
+
+### 2. SECCIÓN PADRES
+- "En honor a [NOMBRE_MAMA] y [NOMBRE_PAPA]"
+- Espacio para foto de la pareja (placeholder con alt text)
+- Mensaje personal/frase emotiva
+
+### 3. INFORMACIÓN DEL BEBÉ
+- "Esperando a [NOMBRE_BEBE]" (o "Nuestro pequeño milagro" si no tienen nombre)
+- Indicación de sexo (usar colores variables)
+- Fecha estimada: "Baby [APELLIDO] - [MES/AÑO]"
+
+### 4. DETALLES DEL EVENTO
+- **Fecha**: Día completo y fecha
+- **Hora**: Inicio del evento
+- **Dirección**: Completa y formateada
+- **Botón Google Maps**: Link que abra ubicación en nueva pestaña
+
+### 5. SECCIÓN CONTACTO
+- **Botón WhatsApp "Confirmar Asistencia"**:
+  - Mensaje pre-escrito: "¡Hola [NOMBRE_MAMA]! Confirmo mi asistencia al Baby Shower. ¡Estamos emocionados de celebrar con ustedes! 🍼👶"
+  - Link: `https://wa.me/[TELEFONO]?text=[MENSAJE_CODIFICADO]`
+- **Botón WhatsApp "Hacer Consulta"**:
+  - Mensaje: "¡Hola! Tengo una consulta sobre el Baby Shower del [FECHA]. ¿Podrían ayudarme? 😊"
+- **Teléfono alternativo**: Link `tel:[NUMERO]`
+
+### 6. SECCIÓN REGALOS (opcional)
+- Mensaje suave sobre regalos
+- "Lo más importante es tu presencia"
+- Sugerencias básicas si aplica
+
+### 7. ELEMENTOS INTERACTIVOS
+- **Contador regresivo**: Días, horas, minutos hasta el evento
+- **Botón compartir**: Para redes sociales (al menos WhatsApp)
+- **Animaciones suaves**: Hover effects, fade-ins
+
+### 8. FOOTER
+- Hashtag del evento: #BabyShower[APELLIDOS]
+- Mensaje de despedida emotivo
+- Elementos decorativos finales
+
+---
+
+## ESPECIFICACIONES DE DISEÑO:
+
+### Responsive Design:
+- **Mobile-first approach**
+- Breakpoints: 768px (tablet), 1024px (desktop)
+- Texto legible en móvil (mínimo 16px)
+
+### Tipografía:
+- Google Fonts: Dancing Script para títulos, Open Sans para texto
+- Jerarquía clara de tamaños
+- Contraste accesible (mínimo 4.5:1)
+
+### Layout:
+- Secciones claramente definidas
+- Padding y margin consistentes usando variables
+- Botones call-to-action destacados
+- Espacios en blanco generosos
+
+### Iconografía:
+- SVG inline para iconos de bebé
+- Font Awesome o iconos CSS puro
+- Elementos decorativos sutiles (bordes, separadores)
+
+---
+
+## FUNCIONALIDADES JAVASCRIPT:
+
+### Contador regresivo:
+- Calcular días, horas, minutos hasta la fecha del evento
+- Actualización cada minuto
+- Mostrar "¡Es hoy!" cuando llegue el día
+
+### Botones WhatsApp:
+- Función para codificar mensajes URL
+- Detectar dispositivo (abrir WhatsApp Web o app)
+- Validación de números de teléfono
+
+### Animaciones:
+- Fade-in al hacer scroll (Intersection Observer)
+- Hover effects en botones
+- Loading suave del contador
+
+---
+
+## PLACEHOLDERS A INCLUIR:
+- `[NOMBRE_MAMA]` - Nombre de la madre
+- `[NOMBRE_PAPA]` - Nombre del padre  
+- `[NOMBRE_BEBE]` - Nombre del bebé (opcional)
+- `[APELLIDO]` - Apellido familiar
+- `[FECHA_EVENTO]` - Fecha del baby shower
+- `[HORA_EVENTO]` - Hora de inicio
+- `[DIRECCION]` - Dirección completa
+- `[TELEFONO]` - Número WhatsApp (formato internacional)
+- `[FECHA_NACIMIENTO]` - Fecha estimada de nacimiento
+- `[URL_FOTO]` - URL de foto de los padres
+
+---
+
+## COMENTARIOS EN EL CÓDIGO:
+- Sección clara para cada bloque
+- Variables CSS explicadas
+- Instrucciones para personalizar colores
+- Ejemplos de cómo cambiar textos
+
+---
+
+## EJEMPLO DE COMENTARIO PARA PERSONALIZACIÓN:
+```html
+<!-- 
+PERSONALIZACIÓN RÁPIDA:
+1. Cambiar colores: Modificar variables CSS en :root
+2. Cambiar textos: Buscar y reemplazar placeholders [NOMBRE_XXXX]  
+3. Cambiar WhatsApp: Modificar número en data-phone
+4. Cambiar fecha: Actualizar fecha en JavaScript del contador
+-->
+```
+
+---
+
+**RESULTADO ESPERADO**: Un archivo HTML completo, funcional, responsive y listo para personalizar, que incluya todos los elementos definidos en nuestra estructura base, con especial énfasis en la comunicación via WhatsApp y la facilidad de personalización a través de variables CSS.
