@@ -1283,14 +1283,24 @@ h1, h2, h3, h4 {
 
 @media (max-width: 425px) {
 
+ .hero .couple-names {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+    }
+    .hero .date-text {
+        font-size: 0.9rem;
+    }
+    .hero .subtitle {
+        font-size: 0.9rem;
+    }
+}
+
 .back-btn {
     padding: 0.5rem 0.7rem;
 }
 
 .whatsapp-btn{
     padding: 0.5rem 0.7rem;
-}
-
 }
 
 .social-icons {
