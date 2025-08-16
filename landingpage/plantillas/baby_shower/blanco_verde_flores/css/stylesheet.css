@@ -1824,4 +1824,15 @@
             .swiper-container {
                 height: 250px;
             }
+            .footer-hashtag{
+                font-size: 1.2rem;
+            }
+            .footer-message{
+            font-size: 0.9rem;
+            }
+
+            .footer-final{
+                font-size: 0.8rem;
+            }
+
         }
